@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&family=Roboto+Slab:wght@300;400;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* colores // 
+
+azul: #009bb4
+
+///////////*/
+
+* {
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+	@apply overflow-hidden bg-slate-100 w-screen h-screen font-NotoSans text-neutral-800 text-base;
+}
+
+h2 {
+	@apply font-RobotoSlab font-bold text-4xl text-[#009bb4] drop-shadow-md
+}
+
+@layer components {
+    .carousel-bg::before{
+		content: "";
+		background-color: #000;
+		opacity: 0.5;
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+	}
+}
