@@ -1,4 +1,5 @@
-import { NavBar, HeroCarousel } from '../';
+import { useState } from 'react';
+import { NavBar, HeroCarousel, TabsContainer } from '../';
 
 const Landing = () => {
     const carouselSlides = [
@@ -7,10 +8,13 @@ const Landing = () => {
         {url: "https://i.ibb.co/27sSP9S/MY2021-CFORCE-625-625-Touring-Action-8.jpg"}
     ]
 
+    const [tabIndex, setTabIndex] = useState(1)
+
     return (
         <>
         <NavBar />
-        <HeroCarousel carouselSlides={carouselSlides} />
+        <HeroCarousel carouselSlides={carouselSlides} setTabIndex={setTabIndex} />
+        <TabsContainer tabIndex={tabIndex} setTabIndex={setTabIndex} />
         </>
     )
 }

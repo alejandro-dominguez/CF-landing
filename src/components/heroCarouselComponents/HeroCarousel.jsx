@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { CarouselCard1, CarouselCard2, CarouselCard3 } from '../';
 
-const HeroCarousel = ({ carouselSlides }) => {
+const HeroCarousel = ({ carouselSlides, setTabIndex }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
-    const autoScroll = /* true */ false
+    const autoScroll = true
     let slideInterval
     let intervalTimer = 7000
 
@@ -31,27 +31,27 @@ const HeroCarousel = ({ carouselSlides }) => {
     }, [currentIndex, slideInterval, autoScroll])
 
     return (
-        <div className="h-[70vh] w-full relative">
-            <div className='absolute flex gap-8 left-64 bottom-6'>
-                <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-40 hover:bg-black
+        <div className="h-[67vh] w-screen relative">
+            <div className='absolute flex gap-6 left-64 bottom-7'>
+                <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-10 hover:bg-black
                 transition-colors ease-linear"
                 onClick={() => prevSlide()}>
-                    <FiChevronLeft className="text-white/90 hover:text-[#009bb4] text-5xl transition-colors
+                    <FiChevronLeft className="text-white/90 hover:text-[#009bb4] text-4xl transition-colors
                     drop-shadow-sm" />
                 </div>
-                <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-40 hover:bg-black
+                <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-10 hover:bg-black
                 transition-colors ease-linear"
                 onClick={() => nextSlide()}>
-                    <FiChevronRight className="text-white/90 hover:text-[#009bb4] text-5xl transition-colors
+                    <FiChevronRight className="text-white/90 hover:text-[#009bb4] text-4xl transition-colors
                     drop-shadow-sm" />
                 </div>
             </div>
             <div style={{backgroundImage: `url(${carouselSlides[currentIndex].url})`}}
-            className="bg-cover bg-center h-full w-full transition-all duration-500 ease-out grid
+            className="bg-cover bg-center h-full w-screen transition-all duration-500 ease-out grid
             place-items-center text-white carousel-bg">
-                {currentIndex === 0 ? <CarouselCard1 />
-                : currentIndex === 1 ? <CarouselCard2 />
-                : currentIndex === 2 ? <CarouselCard3 />
+                {currentIndex === 0 ? <CarouselCard1 setTabIndex={setTabIndex} />
+                : currentIndex === 1 ? <CarouselCard2 setTabIndex={setTabIndex} />
+                : currentIndex === 2 ? <CarouselCard3 setTabIndex={setTabIndex} />
                 : null}
             </div>
         </div>

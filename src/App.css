@@ -11,25 +11,48 @@ azul: #009bb4
 ///////////*/
 
 * {
-	margin: 0;
-	padding: 0;
-    box-sizing: border-box;
+	@apply m-0 p-0 box-border focus:outline-none
 }
 
 html {
-    scroll-behavior: smooth;
+    @apply scroll-smooth
 }
 
 body {
-	@apply overflow-hidden bg-slate-100 w-screen h-screen font-NotoSans text-neutral-800 text-base;
+	@apply overflow-hidden bg-slate-100 w-screen h-screen font-NotoSans text-neutral-900 text-base
+}
+
+h1 {
+	@apply font-RobotoSlab font-black text-[2.75rem] text-[#009bb4] uppercase
 }
 
 h2 {
-	@apply font-RobotoSlab font-bold text-4xl text-[#009bb4] drop-shadow-md
+	@apply font-RobotoSlab font-bold text-4xl text-[#009bb4] drop-shadow-md uppercase
 }
 
 @layer components {
-    .carousel-bg::before{
+	.navLi {
+		background-color: var(--background-color);
+		--background-color: transparent;
+		--accent-color: #009bb4;
+	}
+
+	.navLi::before {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background-color: var(--accent-color);
+		transform: scaleX(0);
+		transform-origin: left;
+		transition: transform 250ms ease-out;
+		z-index: -1;
+	}
+
+	.navLi:hover::before {
+		transform: scaleX(1);
+	}
+
+    .carousel-bg::before {
 		content: "";
 		background-color: #000;
 		opacity: 0.5;
@@ -37,5 +60,29 @@ h2 {
 		top: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	.tab::before {
+		content: "";
+		background-color: rgba(0, 0, 0, 0.25);
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: -15%;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	.activeTab::before {
+		content: "";
+		background-color: #009bb4;
+		position: absolute;
+		right: 0;
+		left: 0;
+		bottom: -15%;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
 	}
 }
