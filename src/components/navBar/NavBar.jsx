@@ -14,7 +14,7 @@ const NavBar = ({ tabSection }) => {
             <div className="flex justify-between w-full">
                 <div className="w-40 cursor-pointer"
                 onClick={() => scrollTop()}>
-                    <img src={logo} alt="CF moto logo" className="w-full block" />
+                    <img src={logo} alt="CF moto logo" className="w-full block drop-shadow-sm" />
                 </div>
                 <ul className='flex gap-6 font-medium tracking-wide'>
                     <li className='navLi cursor-pointer px-6 py-1 relative transition-colors ease-linear

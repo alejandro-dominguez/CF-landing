@@ -27,7 +27,7 @@ const CarouselCard3 = ({ setTabIndex, tabSection }) => {
                     iste dicta vero at quae consequuntur iusto accusantium! Consequatur quasi inventore 
                     expedita illo quaerat nobis, laudantium consectetur a ratione at?
                 </p>
-                <button type='button' className='px-6 py-3 mt-2 bg-[#009bb4] rounded-full font-RobotoSlab
+                <button type='button' className='px-5 py-2 mt-2 bg-[#009bb4] rounded-full font-RobotoSlab
                 font-semibold uppercase tracking-wider transition-colors ease-linear duration-300 text-sm
                 hover:bg-white hover:text-neutral-900 focus:bg-white focus:text-neutral-900'
                 onClick={() => handleClick()}>
@@ -35,9 +35,9 @@ const CarouselCard3 = ({ setTabIndex, tabSection }) => {
                 </button>
             </div>
             <div className="flex flex-col">
-                <div className={activeClass ? `absolute -top-12 -translate-x-[360px] w-[45rem] transition-all ease-out
+                <div className={activeClass ? `absolute top-1 -translate-x-[300px] w-[40rem] transition-all ease-out
                 duration-[800ms] opacity-100`
-                : `absolute -top-12 translate-x-[500px] w-[45rem] transition-all ease-out duration-[800ms] opacity-0`}>
+                : `absolute top-1 translate-x-[300px] w-[40rem] transition-all ease-out duration-[800ms] opacity-0`}>
                     <img src="https://i.ibb.co/mGyCsdW/MY2022-ZFORCE1000-SPORT-Left45-Ferrari-Red.png"
                     alt="ZFOCE1000 sport" className='w-full h-full block drop-shadow-md' />
                 </div>

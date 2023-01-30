@@ -27,7 +27,7 @@ const CarouselCard2 = ({ setTabIndex, tabSection }) => {
                     iste dicta vero at quae consequuntur iusto accusantium! Consequatur quasi inventore 
                     expedita illo quaerat nobis, laudantium consectetur a ratione at?
                 </p>
-                <button type='button' className='px-6 py-3 mt-2 bg-[#009bb4] rounded-full font-RobotoSlab
+                <button type='button' className='px-5 py-2 mt-2 bg-[#009bb4] rounded-full font-RobotoSlab
                 font-semibold uppercase tracking-wider transition-colors ease-linear duration-300 text-sm
                 hover:bg-white hover:text-neutral-900 focus:bg-white focus:text-neutral-900'
                 onClick={() => handleClick()}>
@@ -35,9 +35,9 @@ const CarouselCard2 = ({ setTabIndex, tabSection }) => {
                 </button>
             </div>
             <div className="flex flex-col">
-                <div className={activeClass ? `absolute -top-6 w-[45rem] -translate-x-[360px] transition-all ease-out
+                <div className={activeClass ? `absolute top-7 w-[40rem] -translate-x-[300px] transition-all ease-out
                 duration-[800ms] opacity-100`
-                : `absolute -top-6 translate-x-[500px] w-[45rem] transition-all ease-out duration-[800ms] opacity-0`}>
+                : `absolute top-7 translate-x-[300px] w-[40rem] transition-all ease-out duration-[800ms] opacity-0`}>
                     <img src="https://i.ibb.co/cr8zFFx/MY2022-UFORCE-600-Left45-Truetimber-Camo.png"
                     alt="ZFOCE1000 sport" className='w-full h-full block drop-shadow-md' />
                 </div>

@@ -86,6 +86,43 @@ h2 {
 		z-index: -1;
 	}
 
+	.dropShadow {
+		filter: drop-shadow(.15rem .18rem 0.2rem rgba(0, 0, 0, 0.3));
+	}
+
+	.tabImg::before {
+		content: "";
+		background-color: #009bb4;
+		position: absolute;
+		right: 40px;
+		bottom: 10px;
+		width: 50px;
+		height: 10px;
+		z-index: -1;
+	}
+
+	.tabImg::after {
+		content: "";
+		background-color: #009bb4;
+		position: absolute;
+		right: 40px;
+		bottom: 10px;
+		width: 10px;
+		height: 50px;
+		z-index: -1;
+	}
+
+	.tabTitle::before {
+		content: "";
+		background-color: rgba(0, 156, 180, 0.75);
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 104%;
+		height: 35%;
+		z-index: -1;
+	}
+
 	.parallaxImg {
 		background-image: url(https://i.ibb.co/C0vwJ0t/MY2021-CFORCE-625-625-Touring-Action-4.jpg);
 		position: relative;
