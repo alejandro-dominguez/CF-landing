@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { NavBar, HeroCarousel, TabsContainer } from '../';
+import { useState, useRef } from 'react';
+import { NavBar, HeroCarousel, TabsContainer, ParallaxBg, AboutUs, Footer } from '../';
 
 const Landing = () => {
     const carouselSlides = [
@@ -9,12 +9,16 @@ const Landing = () => {
     ]
 
     const [tabIndex, setTabIndex] = useState(1)
+    const tabSection = useRef(null)
 
     return (
         <>
-        <NavBar />
-        <HeroCarousel carouselSlides={carouselSlides} setTabIndex={setTabIndex} />
-        <TabsContainer tabIndex={tabIndex} setTabIndex={setTabIndex} />
+        <NavBar tabSection={tabSection} />
+        <HeroCarousel carouselSlides={carouselSlides} setTabIndex={setTabIndex} tabSection={tabSection} />
+        <TabsContainer tabIndex={tabIndex} setTabIndex={setTabIndex} tabSection={tabSection} />
+        <ParallaxBg/>
+        <AboutUs/>
+        <Footer/>
         </>
     )
 }

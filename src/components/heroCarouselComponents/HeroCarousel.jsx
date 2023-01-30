@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { FiChevronLeft, FiChevronRight } from 'react-icons/fi';
 import { CarouselCard1, CarouselCard2, CarouselCard3 } from '../';
 
-const HeroCarousel = ({ carouselSlides, setTabIndex }) => {
+const HeroCarousel = ({ carouselSlides, setTabIndex, tabSection }) => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const autoScroll = true
     let slideInterval
@@ -32,7 +32,7 @@ const HeroCarousel = ({ carouselSlides, setTabIndex }) => {
 
     return (
         <div className="h-[67vh] w-screen relative">
-            <div className='absolute flex gap-6 left-64 bottom-7'>
+            <div className='absolute flex gap-6 left-64 bottom-6'>
                 <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-10 hover:bg-black
                 transition-colors ease-linear"
                 onClick={() => prevSlide()}>
@@ -48,10 +48,10 @@ const HeroCarousel = ({ carouselSlides, setTabIndex }) => {
             </div>
             <div style={{backgroundImage: `url(${carouselSlides[currentIndex].url})`}}
             className="bg-cover bg-center h-full w-screen transition-all duration-500 ease-out grid
-            place-items-center text-white carousel-bg">
-                {currentIndex === 0 ? <CarouselCard1 setTabIndex={setTabIndex} />
-                : currentIndex === 1 ? <CarouselCard2 setTabIndex={setTabIndex} />
-                : currentIndex === 2 ? <CarouselCard3 setTabIndex={setTabIndex} />
+            place-items-center text-white relative carousel-bg">
+                {currentIndex === 0 ? <CarouselCard1 setTabIndex={setTabIndex} tabSection={tabSection} />
+                : currentIndex === 1 ? <CarouselCard2 setTabIndex={setTabIndex} tabSection={tabSection} />
+                : currentIndex === 2 ? <CarouselCard3 setTabIndex={setTabIndex} tabSection={tabSection} />
                 : null}
             </div>
         </div>
