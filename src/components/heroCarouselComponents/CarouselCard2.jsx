@@ -12,14 +12,14 @@ const CarouselCard2 = ({ setTabIndex, tabSection }) => {
 
     const handleClick = () => {
         setTabIndex(2)
-        scrollToRef(tabSection.current)
+        scrollToRef(tabSection.current, 68)
     }
 
     return (
         <div className='grid grid-cols-2 place-items-center relative w-full px-16'>
             <div className={activeClass ? `flex flex-col items-start gap-4 pt-20 transition-all ease-out duration-[800ms] opacity-100`
             : `flex flex-col items-start gap-4 pt-20 -translate-x-[500px] transition-all ease-out duration-[800ms] opacity-0`}>
-                <h2>Lorem ipsum dolor</h2>
+                <h3>Lorem ipsum dolor</h3>
                 <p className='drop-shadow-md'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis impedit itaque 
                     eaque quia, expedita ipsam. Exercitationem cupiditate quia pariatur adipisci aut 

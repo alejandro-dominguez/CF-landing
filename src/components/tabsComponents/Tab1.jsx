@@ -4,7 +4,7 @@ const Tab1 = () => {
     return (
         <div className='w-full flex justify-between items-center px-14 min-h-[350px]'>
             <div className="flex flex-col justify-start items-start w-1/2 gap-2">
-                <h3 className='text-4xl font-bold relative tabTitle'>CFORCE 1000</h3>
+                <h4 className='text-4xl font-bold relative title'>CFORCE 1000</h4>
                 <p className='mt-2'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo error nostrum laboriosam vero maiores eos 
                     necessitatibus provident saepe esse ipsam, fugit nisi explicabo iusto, numquam libero dolore soluta hic qui velit.

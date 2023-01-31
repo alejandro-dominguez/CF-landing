@@ -1,10 +1,35 @@
+import { useEffect, useRef, useState } from "react";
 import { Tab1, Tab2, Tab3 } from "../" ;
 
 const TabsContainer = ({ tabIndex, setTabIndex, tabSection }) => {
+    const tabContent = useRef(null)
+    const [isVisible, setIsVisible] = useState(false)
+
+    const animateOnScroll = (entries) => {
+        entries.forEach(entry => {
+            !entry.isIntersecting ? null : setIsVisible(true)
+        })
+    }
+
+    const options = {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0.5
+    }
+
+    useEffect(() => {
+        const observer = new IntersectionObserver(animateOnScroll, options)
+        if (tabContent.current) observer.observe(tabContent.current)
+        
+        return () => {
+            if (tabContent.current) observer.unobserve(tabContent.current)
+        }
+    }, [tabContent, options])
+    
     return (
-        <div className='flex flex-col items-center justify-start'>
+        <div className='flex flex-col items-center justify-start' ref={tabSection}>
             <div className="flex flex-col w-full justify-center items-center px-16 mt-11">
-                <h1 className='tracking-tight'>Modelos</h1>
+                <h1>Modelos</h1>
                 <ul className="flex justify-evenly w-full mt-11 font-bold text-2xl">
                     <li className='flex flex-col'>
                         <button type='button' className={tabIndex === 1 ? "w-fit uppercase activeTab relative bg-slate-100"
@@ -28,7 +53,8 @@ const TabsContainer = ({ tabIndex, setTabIndex, tabSection }) => {
                         </button>
                     </li>
                 </ul>
-                <section className='w-full mt-16' ref={tabSection}>
+                <section className={isVisible ? 'w-full mt-16 opacity-100 translate-y-0 transition-all ease-out duration-[1250ms]' :
+                'w-full mt-16 opacity-0 translate-y-16 transition-all ease-out duration-[1250ms]'} ref={tabContent}>
                     {tabIndex === 1 ? <Tab1 /> :
                     tabIndex === 2 ? <Tab2 /> :
                     tabIndex === 3 ? <Tab3 /> :

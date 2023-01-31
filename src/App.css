@@ -22,11 +22,11 @@ body {
 	@apply overflow-x-hidden bg-slate-100 w-screen min-h-screen font-NotoSans text-neutral-900 text-base
 }
 
-h1 {
-	@apply font-RobotoSlab font-black text-[2.75rem] text-[#009bb4] uppercase
+h1, h2 {
+	@apply font-RobotoSlab font-black text-[2.75rem] text-[#009bb4] uppercase tracking-tight
 }
 
-h2 {
+h3 {
 	@apply font-RobotoSlab font-bold text-4xl text-[#009bb4] drop-shadow-md uppercase
 }
 
@@ -112,7 +112,7 @@ h2 {
 		z-index: -1;
 	}
 
-	.tabTitle::before {
+	.title::before {
 		content: "";
 		background-color: rgba(0, 156, 180, 0.75);
 		position: absolute;

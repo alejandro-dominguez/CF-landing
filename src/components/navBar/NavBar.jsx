@@ -1,7 +1,7 @@
 import logo from '../../assets/logo-cf.svg';
 import scrollToRef from "../../utils/scrollToRef";
 
-const NavBar = ({ tabSection }) => {
+const NavBar = ({ tabSection, aboutUsSection, contactSection }) => {
     const scrollTop = () => {
         window.scrollTo({
             top: 0,
@@ -18,16 +18,18 @@ const NavBar = ({ tabSection }) => {
                 </div>
                 <ul className='flex gap-6 font-medium tracking-wide'>
                     <li className='navLi cursor-pointer px-6 py-1 relative transition-colors ease-linear
-                    text-white/90 hover:text-white uppercase'>
+                    text-white/90 hover:text-white uppercase'
+                    onClick={() => scrollToRef(tabSection.current, 68)}>
+                        Modelos
+                    </li>
+                    <li className='navLi cursor-pointer px-6 py-1 relative transition-colors ease-linear
+                    text-white/90 hover:text-white uppercase'
+                    onClick={() => scrollToRef(aboutUsSection.current, 125)}>
                         Nosotros
                     </li>
                     <li className='navLi cursor-pointer px-6 py-1 relative transition-colors ease-linear
                     text-white/90 hover:text-white uppercase'
-                    onClick={() => scrollToRef(tabSection.current)}>
-                        Modelos
-                    </li>
-                    <li className='navLi cursor-pointer px-6 py-1 relative transition-colors ease-linear
-                    text-white/90 hover:text-white uppercase'>
+                    onClick={() => scrollToRef(contactSection.current, 10)}>
                         Contacto
                     </li>
                 </ul>

@@ -1,6 +1,6 @@
-const scrollToRef = (ref) => {
+const scrollToRef = (ref , n) => {
     window.scrollTo({
-        top: ref.offsetTop - 277,
+        top: ref.offsetTop - n,
         behavior: "smooth",
     })
 }

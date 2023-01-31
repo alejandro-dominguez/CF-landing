@@ -9,5 +9,6 @@ export { default as Tab1 } from './tabsComponents/Tab1';
 export { default as Tab2 } from './tabsComponents/Tab2';
 export { default as Tab3 } from './tabsComponents/Tab3';
 export { default as ParallaxBg } from './parallaxBg/ParallaxBg';
-export { default as AboutUs } from './aboutUs/AboutUs';
+export { default as AboutUs } from './aboutUsComponents/AboutUs';
+export { default as Contact } from './contact/Contact';
 export { default as Footer } from './footer/Footer';
