@@ -30,26 +30,30 @@ const TabsContainer = ({ tabIndex, setTabIndex, tabSection }) => {
         <div className='flex flex-col items-center justify-start' ref={tabSection}>
             <div className="flex flex-col w-full justify-center items-center px-16 mt-11">
                 <h1>Modelos</h1>
-                <ul className="flex justify-evenly w-full mt-11 font-bold text-2xl">
-                    <li className='flex flex-col'>
-                        <button type='button' className={tabIndex === 1 ? "w-fit uppercase activeTab relative bg-slate-100"
-                        : "w-fit uppercase tab relative bg-slate-100"}
+                <ul className="flex justify-evenly items-center w-full mt-11 font-bold text-2xl relative">
+                    <li className='flex flex-col relative'>
+                        <button type='button' className={tabIndex === 1 ? `w-[4.75rem] uppercase activeTab relative
+                        bg-slate-100 tracking-wider` : "w-[4.75rem] uppercase tab relative bg-slate-100 tracking-wider"}
                         onClick={() => setTabIndex(1)}>
-                            cforce
+                            atv
                         </button>
                     </li>
-                    <li className='flex flex-col'>
-                        <button type='button' className={tabIndex === 2 ? "w-fit uppercase activeTab relative bg-slate-100"
-                        : "w-fit uppercase tab relative bg-slate-100"}
+                    <li className='flex flex-col relative'>
+                    <button type='button' className={tabIndex === 2 ? `w-[4.75rem] uppercase activeTab relative
+                        bg-slate-100 tracking-wider` : "w-[4.75rem] uppercase tab relative bg-slate-100 tracking-wider"}
                         onClick={() => setTabIndex(2)}>
-                            uforce
+                            utv
                         </button>
+                        <div className="flex self-center justify-self-center h-[117%] gap-80 absolute -z-[1]">
+                            <div className="w-[4px] bg-neutral-700" />
+                            <div className="w-[4px] bg-neutral-700" />
+                        </div>
                     </li>
-                    <li className='flex flex-col'>
-                        <button type='button' className={tabIndex === 3 ? "w-fit uppercase activeTab relative bg-slate-100"
-                        : "w-fit uppercase tab relative bg-slate-100"}
+                    <li className='flex flex-col relative'>
+                    <button type='button' className={tabIndex === 3 ? `w-[4.75rem] uppercase activeTab relative
+                        bg-slate-100 tracking-wider` : "w-[4.75rem] uppercase tab relative bg-slate-100 tracking-wider"}
                         onClick={() => setTabIndex(3)}>
-                            zforce
+                            ssv
                         </button>
                     </li>
                 </ul>
