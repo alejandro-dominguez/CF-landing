@@ -3,8 +3,8 @@ import AboutUsCards from "./AboutUsCards";
 
 const AboutUs = ({ aboutUsSection }) => {
     return (
-        <div className='w-full grid place-items-center mt-14' ref={aboutUsSection}>
-            <h2 className="tracking-[0.005rem]">sobre cfmoto</h2>
+        <div className='w-full grid place-items-center mt-14 overflow-x-hidden' ref={aboutUsSection}>
+            <h2 className="tracking-[0.005rem] py-[0.15rem]">sobre cfmoto</h2>
             <div className='w-full flex items-center justify-between px-16 mt-14'>
                 <div className="flex flex-col self-start gap-4">
                     <h4 className='text-4xl font-bold uppercase self-start relative title'>panorama de cfmoto</h4>

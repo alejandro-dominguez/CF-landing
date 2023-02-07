@@ -32,16 +32,16 @@ const HeroCarousel = ({ carouselSlides, setTabIndex, tabSection }) => {
 
     return (
         <div className="h-[69vh] w-screen relative">
-            <div className='absolute flex gap-4 left-64 bottom-6'>
-                <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-10 hover:bg-black
-                transition-colors ease-linear"
-                onClick={() => prevSlide()}>
-                    <FiChevronLeft className="text-white/90 hover:text-[#009bb4] text-3xl transition-colors drop-shadow-sm" />
-                </div>
-                <div className="grid place-items-center px-[0.05rem] py-[0.1rem] bg-black/60 cursor-pointer z-10 hover:bg-black
+            <div className='absolute flex gap-6 left-64 bottom-[1.9rem]'>
+            <div className="grid place-items-center px-[0.075rem] py-1 bg-white/50 cursor-pointer z-10 hover:bg-white/40
                 transition-colors ease-linear"
                 onClick={() => nextSlide()}>
-                    <FiChevronRight className="text-white/90 hover:text-[#009bb4] text-3xl transition-colors drop-shadow-sm" />
+                    <FiChevronLeft className="text-black/90 hover:text-[#009bb4] text-2xl transition-colors drop-shadow-sm" />
+                </div>
+                <div className="grid place-items-center px-[0.075rem] py-1 bg-white/50 cursor-pointer z-10 hover:bg-white/40
+                transition-colors ease-linear"
+                onClick={() => nextSlide()}>
+                    <FiChevronRight className="text-black/90 hover:text-[#009bb4] text-2xl transition-colors drop-shadow-sm" />
                 </div>
             </div>
             <div style={{backgroundImage: `url(${carouselSlides[currentIndex].url})`}}

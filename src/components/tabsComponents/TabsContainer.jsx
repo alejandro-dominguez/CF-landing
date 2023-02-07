@@ -45,8 +45,8 @@ const TabsContainer = ({ tabIndex, setTabIndex, tabSection }) => {
                             utv
                         </button>
                         <div className="flex self-center justify-self-center h-[117%] gap-80 absolute -z-[1]">
-                            <div className="w-[4px] bg-neutral-700" />
-                            <div className="w-[4px] bg-neutral-700" />
+                            <div className="w-[4px] bg-neutral-800" />
+                            <div className="w-[4px] bg-neutral-800" />
                         </div>
                     </li>
                     <li className='flex flex-col relative'>

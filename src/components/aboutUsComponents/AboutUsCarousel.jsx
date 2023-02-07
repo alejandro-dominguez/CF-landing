@@ -3,7 +3,7 @@ import React from 'react';
 const AboutUsCarousel = () => {
     return (
         <div>
-            AboutUsCarousel
+            {/* AboutUsCarousel */}
         </div>
     )
 }

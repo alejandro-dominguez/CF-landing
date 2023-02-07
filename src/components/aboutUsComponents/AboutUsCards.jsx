@@ -4,9 +4,9 @@ import inconValue from "../../assets/valor.svg";
 
 const AboutUsCards = () => {
     return (
-        <div className='flex items-center justify-between w-full mt-14 relative'>
+        <div className='flex items-center justify-around min-w-[1250px] min-h-[350px] mt-14 relative'>
             <div className="flex flex-col items-center justify-center w-72 p-6 gap-2 aspect-square bg-white rounded-md text-center
-             border-[#009bb4] border-[3px] shadow-lg hover:scale-105 transition-transform z-10">
+             border-[#009bb4] border-[3px] shadow-lg hover:scale-[1.025] transition-transform ease-linear z-10">
                 <div className="w-20">
                     <img src={inconTec} alt="icon 1" className="block w-full" />
                 </div>
@@ -17,7 +17,7 @@ const AboutUsCards = () => {
                 </p>
             </div>
             <div className="flex flex-col items-center justify-center w-72 p-6 gap-2 aspect-square bg-white rounded-md text-center
-             border-[#009bb4] border-[3px] shadow-lg hover:scale-105 transition-transform z-10">
+             border-[#009bb4] border-[3px] shadow-lg hover:scale-[1.025] transition-transform ease-linear z-10">
                 <div className="w-20 ml-2">
                     <img src={inconQuality} alt="icon 2" className="block w-full" />
                 </div>
@@ -28,7 +28,7 @@ const AboutUsCards = () => {
                 </p>
             </div>
             <div className="flex flex-col items-center justify-center w-72 p-6 gap-2 aspect-square bg-white rounded-md text-center
-             border-[#009bb4] border-[3px] shadow-lg hover:scale-105 transition-transform z-10">
+             border-[#009bb4] border-[3px] shadow-lg hover:scale-[1.025] transition-transform ease-linear z-10">
                 <div className="w-20">
                     <img src={inconValue} alt="icon 3" className="block w-full" />
                 </div>
@@ -38,9 +38,7 @@ const AboutUsCards = () => {
                     consectetur minima praesentium possimus eius unde dolore.
                 </p>
             </div>
-            <div className="w-full h-6 bg-[#009bb4] absolute">
-
-            </div>
+            <div className=" w-5/6 h-[0.8rem] bg-[#009bb4] absolute right-1/2 translate-x-1/2" />
         </div>
     )
 }
