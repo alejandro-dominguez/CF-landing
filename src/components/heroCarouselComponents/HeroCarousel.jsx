@@ -35,7 +35,7 @@ const HeroCarousel = ({ carouselSlides, setTabIndex, tabSection }) => {
             <div className='absolute flex gap-6 left-64 bottom-[1.9rem]'>
             <div className="grid place-items-center px-[0.075rem] py-1 bg-white/50 cursor-pointer z-10 hover:bg-white/40
                 transition-colors ease-linear"
-                onClick={() => nextSlide()}>
+                onClick={() => prevSlide()}>
                     <FiChevronLeft className="text-black/90 hover:text-[#009bb4] text-2xl transition-colors drop-shadow-sm" />
                 </div>
                 <div className="grid place-items-center px-[0.075rem] py-1 bg-white/50 cursor-pointer z-10 hover:bg-white/40

@@ -29,7 +29,7 @@ const NavBar = ({ tabSection, aboutUsSection, contactSection }) => {
                     </li>
                     <li className='navLi cursor-pointer px-6 py-1 relative transition-colors ease-linear
                     text-white/90 hover:text-white uppercase'
-                    onClick={() => scrollToRef(contactSection.current, 10)}>
+                    onClick={() => scrollToRef(contactSection.current, 67)}>
                         Contacto
                     </li>
                 </ul>

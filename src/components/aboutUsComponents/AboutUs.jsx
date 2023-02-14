@@ -1,4 +1,4 @@
-import AboutUsCarousel from "./AboutUsCarousel";
+/* import AboutUsCarousel from "./AboutUsCarousel"; */
 import AboutUsCards from "./AboutUsCards";
 
 const AboutUs = ({ aboutUsSection }) => {
@@ -29,7 +29,7 @@ const AboutUs = ({ aboutUsSection }) => {
             </div>
             <div className="grid place-items-center w-full px-16">
                 <AboutUsCards />
-                <AboutUsCarousel />
+                {/* <AboutUsCarousel /> */}
             </div>
         </div>
     )
