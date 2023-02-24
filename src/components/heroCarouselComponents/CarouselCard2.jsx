@@ -28,8 +28,8 @@ const CarouselCard2 = ({ setTabIndex, tabSection }) => {
                     expedita illo quaerat nobis, laudantium consectetur a ratione at?
                 </p>
                 <button type='button' className='px-5 py-2 mt-2 bg-[#009bb4] rounded-full font-RobotoSlab
-                font-semibold uppercase tracking-wider transition-colors ease-linear duration-300 text-sm
-                hover:bg-white hover:text-neutral-900 focus:bg-white focus:text-neutral-900'
+                font-semibold uppercase tracking-wider transition-colors text-sm hover:bg-white hover:text-neutral-900
+                focus:bg-white focus:text-neutral-900 duration-200'
                 onClick={() => handleClick()}>
                     Conoce más
                 </button>

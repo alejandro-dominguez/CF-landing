@@ -39,7 +39,7 @@ const TabsContainer = ({ tabIndex, setTabIndex, tabSection }) => {
                         </button>
                     </li>
                     <li className='flex flex-col relative'>
-                    <button type='button' className={tabIndex === 2 ? `w-[4.75rem] uppercase activeTab relative
+                        <button type='button' className={tabIndex === 2 ? `w-[4.75rem] uppercase activeTab relative
                         bg-slate-100 tracking-wider` : "w-[4.75rem] uppercase tab relative bg-slate-100 tracking-wider"}
                         onClick={() => setTabIndex(2)}>
                             utv
@@ -50,7 +50,7 @@ const TabsContainer = ({ tabIndex, setTabIndex, tabSection }) => {
                         </div>
                     </li>
                     <li className='flex flex-col relative'>
-                    <button type='button' className={tabIndex === 3 ? `w-[4.75rem] uppercase activeTab relative
+                        <button type='button' className={tabIndex === 3 ? `w-[4.75rem] uppercase activeTab relative
                         bg-slate-100 tracking-wider` : "w-[4.75rem] uppercase tab relative bg-slate-100 tracking-wider"}
                         onClick={() => setTabIndex(3)}>
                             ssv
