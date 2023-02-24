@@ -3,7 +3,7 @@ import { RiInstagramFill, RiFacebookBoxFill } from 'react-icons/ri';
 
 const Footer = () => {
     return (
-        <footer className='w-full bg-slate-700 mt-20 flex justify-between items-center px-16 py-4'>
+        <footer className='w-full bg-[#001E35] mt-20 flex justify-between items-center px-16 py-4'>
             <small className='text-white text-center text-sm font-light tracking-wide'>&copy; Copyright 2077, Pixel Coffee.</small>
             <div className="flex gap-5 items-center justify-center">
                 <a href="https://github.com/alejandro-dominguez" target="_blank" rel="noreferrer">
